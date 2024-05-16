@@ -12,5 +12,9 @@ func main() {
 	// testpackage.Quiz1()
 	// testpackage.Quiz1_2()
 	// testpackage.Quiz2()
-	testpackage.Quiz3()
+	// testpackage.Quiz3()
+	// testpackage.Quiz3_1()
+	// testpackage.Quiz4()
+	// testpackage.Quiz5()
+	testpackage.Quiz6()
 }
