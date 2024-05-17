@@ -17,5 +17,8 @@ func main() {
 	// testpackage.Quiz4()
 	// testpackage.Quiz5()
 	// testpackage.Quiz6()
-	testpackage.QuizMore()
+	// testpackage.QuizMore()
+
+	/* Go Fiber */
+	testpackage.MainServer()
 }
