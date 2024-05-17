@@ -90,40 +90,58 @@ func Quiz1_2() {
 
 // 2
 
-func MinSort(arr []int) []int {
-	n := len(arr)
-	for i := 0; i < n; i++ {
-		swapped := false
-		for j := 0; j < n-i-1; j++ {
-			if arr[j] > arr[j+1] {
-				arr[j], arr[j+1] = arr[j+1], arr[j]
-				swapped = true
-			}
-		}
+// func MinSort(arr []int) []int {
+// 	n := len(arr)
+// 	for i := 0; i < n; i++ {
+// 		swapped := false
+// 		for j := 0; j < n-i-1; j++ {
+// 			if arr[j] > arr[j+1] {
+// 				arr[j], arr[j+1] = arr[j+1], arr[j]
+// 				swapped = true
+// 			}
+// 		}
 
-		if !swapped {
-			break
+// 		if !swapped {
+// 			break
+// 		}
+// 	}
+// 	return arr
+// }
+
+// func MaxSort(arr []int) []int {
+// 	n := len(arr)
+// 	for i := 0; i < n; i++ {
+// 		swapped := false
+// 		for j := 0; j < n-i-1; j++ {
+// 			if arr[j] < arr[j+1] {
+// 				arr[j], arr[j+1] = arr[j+1], arr[j]
+// 				swapped = true
+// 			}
+// 		}
+
+//			if !swapped {
+//				break
+//			}
+//		}
+//		return arr
+//	}
+func MinSort(arr []int) int {
+	var max int
+	for _, e := range arr {
+		if e < max || max == 0 {
+			max = e
 		}
 	}
-	return arr
+	return max
 }
-
-func MaxSort(arr []int) []int {
-	n := len(arr)
-	for i := 0; i < n; i++ {
-		swapped := false
-		for j := 0; j < n-i-1; j++ {
-			if arr[j] < arr[j+1] {
-				arr[j], arr[j+1] = arr[j+1], arr[j]
-				swapped = true
-			}
-		}
-
-		if !swapped {
-			break
+func MaxSort(arr []int) int {
+	var min int
+	for _, e := range arr {
+		if e > min || min == 0 {
+			min = e
 		}
 	}
-	return arr
+	return min
 }
 
 func Quiz2() {
@@ -131,10 +149,10 @@ func Quiz2() {
 	x := []int{48, 96, 86, 68, 57, 82, 63, 70, 37, 34, 83, 27, 19, 97, 9, 17}
 	fmt.Printf("Array count : %d\n", len(x))
 	fmt.Println("Original array:", x)
-	MinSort(x)
-	fmt.Println("Min Sorted array:  ", x)
-	MaxSort(x)
-	fmt.Println("Max Sorted array:  ", x)
+	fmt.Println("Min number is : ", MinSort(x))
+	// fmt.Println("Min Sorted array:  ", x)
+	fmt.Println("Max number is : ", MaxSort(x))
+	// fmt.Println("Max Sorted array:  ", x)
 	fmt.Println("--------")
 }
 
