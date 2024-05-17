@@ -196,17 +196,6 @@ func Maps2() {
 	var fname, lname string
 
 	peoples := make(map[int]map[string]string)
-	// peoples := map[string]map[string]string{
-	// 	"emp_01": {
-	// 		"fname": "Marry",
-	// 		"lname": "Jane",
-	// 	},
-	// 	"emp_02": {
-	// 		"fname": "Gwenn",
-	// 		"lname": "Steframe",
-	// 	},
-	// }
-
 	fmt.Printf("How many Employee register : ")
 	fmt.Scanf("%d", &maxemp)
 	for i := 0; i < maxemp; i++ {
@@ -229,6 +218,17 @@ func Maps2() {
 }
 
 func Quiz5() {
+	// peoples := map[string]map[string]string{
+	// 	"emp_01": {
+	// 		"fname": "Marry",
+	// 		"lname": "Jane",
+	// 	},
+	// 	"emp_02": {
+	// 		"fname": "Gwenn",
+	// 		"lname": "Steframe",
+	// 	},
+	// }
+
 	Maps2()
 }
 
@@ -242,6 +242,8 @@ type mycompany struct {
 }
 
 func Quiz6() {
+	// สร้างStruct company เก็บโครงสร้างข้อมูลบริษัท ให้ออกแบบเองว่าจะมีอะไรในstructบ้าง -ลองแอดค่า และprintมาโชว์ (หน้า45)
+
 	var emp mycompany
 	emp1 := new(mycompany)
 	emp.role = "CEO"
@@ -272,10 +274,17 @@ func Quiz6() {
 
 }
 
-// สร้างStruct company เก็บโครงสร้างข้อมูลบริษัท ให้ออกแบบเองว่าจะมีอะไรในstructบ้าง -ลองแอดค่า และprintมาโชว์ (หน้า45)
-
 // more?
-// ข้อพิเศษอีก1ข้อ จงเขียนโปรแกรมให้ผลออกมาตามรูปนี้(โดยใช้for)
-// *
-// * *
-// * * *
+func QuizMore() {
+	// ข้อพิเศษอีก1ข้อ จงเขียนโปรแกรมให้ผลออกมาตามรูปนี้(โดยใช้for)
+	// *
+	// * *
+	// * * *
+
+	for i := 1; i <= 5; i++ {
+		for j := 0; j < i; j++ {
+			fmt.Printf("* ")
+		}
+		fmt.Printf("\n")
+	}
+}
