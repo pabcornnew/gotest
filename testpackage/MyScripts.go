@@ -203,9 +203,20 @@ func Quiz4() {
 }
 
 // 4_1
+func cutText(values string) {
+	for _, v := range values {
+		if string(v) == " " {
+			strings.TrimSpace(string(v))
+		} else {
+			fmt.Printf("%s", string(v))
+		}
+	}
+}
+
 func Quiz4_1() {
 	// ทำเป็นฟังชัน cutText(“ine t”) ⇒ “inet”
-
+	character := "i n et"
+	cutText(character)
 }
 
 // 5

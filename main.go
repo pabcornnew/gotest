@@ -8,7 +8,7 @@ import (
 
 func main() {
 	fmt.Println("Hello This is go test")
-	testpackage.Quiz0()
+	// testpackage.Quiz0()
 	// testpackage.Quiz1()
 	// testpackage.Quiz1_2()
 	// testpackage.Quiz2()
@@ -17,5 +17,5 @@ func main() {
 	// testpackage.Quiz4()
 	// testpackage.Quiz5()
 	// testpackage.Quiz6()
-	// testpackage.QuizMore()
+	testpackage.QuizMore()
 }
